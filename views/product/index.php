@@ -69,21 +69,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     'contentOptions' => ['style'=>'width:50px;'],
                   ],
 
-                  /*[
-                      'format' => 'image',
-                      'attribute' => 'icon',
-                      'value' => function ($model) {
-                          return $model->getImageUrl(); 
-                      },
-                  ],*/
-
                   [
                       'attribute' => 'icon',
                       'format' => 'html',    
                       'value' => function ($data) {
-                          return Html::img(Yii::getAlias('@web').'/icon/'. $data->icon,
-                              ['width' => '70px']);
+                          return Html::img(Yii::getAlias('@web').'/icons/'. $data->icon,
+                              ['width' => '30px']);
                       },
+                      'contentOptions' => ['style'=>'width:50px;'],
                   ],
 
                   [

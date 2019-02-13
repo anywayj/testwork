@@ -66,9 +66,5 @@ class Product extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
-
-    public function getImageUrl()
-    {
-        return Url::to('@web/icons/' . $this->icon, true);
-    }
+    
 }
